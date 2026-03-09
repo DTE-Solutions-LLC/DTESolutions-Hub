@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse | Behavioral Financial Intelligence Breakdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;700&family=Bebas+Neue&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --obsidian: #050505;
+            --kinetic-green: #22C55E;
+            --charcoal: #111111;
+            --neon-amber: #F59E0B;
+        }
+        body {
+            background-color: var(--obsidian);
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-display { font-family: 'Bebas Neue', cursive; }
+        .font-tech { font-family: 'Jura', sans-serif; }
+        
+        .glass-card {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            transition: all 0.4s ease;
+        }
+        .glass-card:hover {
+            border-color: var(--kinetic-green);
+            background: rgba(15, 15, 15, 0.9);
+        }
+        .text-gradient-green {
+            background: linear-gradient(135deg, #22C55E, #4ADE80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .green-glow { filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.4)); }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+        .animate-pulse-slow { animation: pulse-slow 8s ease-in-out infinite; }
+
+        .img-mask {
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="selection:bg-green-500/30 overflow-x-hidden">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 left-0 w-full z-50 p-8 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <a href="index.html" class="flex items-center gap-4 group">
+            <div class="w-8 h-8 bg-zinc-900 border border-[#22C55E]/40 rounded flex items-center justify-center font-black text-[#22C55E] group-hover:bg-[#22C55E] group-hover:text-black transition-all">DTE</div>
+            <span class="font-tech tracking-[0.3em] uppercase text-[9px] text-white/40">Return to Hub</span>
+        </a>
+        <div class="hidden md:flex gap-8 text-[9px] font-black uppercase tracking-widest text-white/60">
+            <a href="#vision" class="hover:text-white transition-colors">Vision</a>
+            <a href="#nova" class="hover:text-white transition-colors">Nova AI</a>
+            <a href="#tech" class="hover:text-white transition-colors">Architecture</a>
+            <a href="#investment" class="text-[#22C55E]">Investment</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center relative px-8 pt-20">
+        <div class="absolute inset-0 overflow-hidden opacity-40">
+            <img src="assets/pulse/Pulse-Intro.png" alt="Pulse Intro" class="w-full h-full object-cover img-mask">
+        </div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_70%)]"></div>
+        
+        <div class="relative z-10 text-center max-w-5xl">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 scale-90 md:scale-100">
+                <i data-lucide="activity" class="w-4 h-4 text-[#22C55E]"></i>
+                <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-white/80">The Behavioral Financial Conscience</span>
+            </div>
+
+            <h1 class="font-display text-8xl md:text-[12rem] tracking-tighter leading-none mb-6 text-gradient-green green-glow">
+                PULSE
+            </h1>
+
+            <p class="text-xl md:text-3xl text-white/60 leading-relaxed mb-12 font-light max-w-3xl mx-auto">
+                "Your financial rhythm isn�t random � <span class="text-white font-medium">Pulse</span> detects it, and <span class="italic text-[#22C55E]">Nova</span> helps you master it."
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="assets/fluff/Fluff_Golf_Investor_Pitch.pdf" download class="px-10 py-5 bg-[#22C55E] text-black font-black uppercase text-xs rounded-full shadow-xl shadow-[#22C55E]/20 hover:scale-105 transition-all inline-block">Download Pitch Deck</a>
+                <button class="px-10 py-5 border border-white/10 text-white font-black uppercase text-xs rounded-full hover:bg-white/5 transition-all">Technical Spec</button>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/10 flex flex-col items-center">
+            <div class="w-px h-16 bg-gradient-to-b from-[#22C55E] to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- The Cognitive Gap -->
+    <section id="vision" class="py-32 px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-20 items-center mb-20">
+            <div class="flex-1">
+                <span class="font-tech text-[10px] uppercase tracking-[0.5em] text-[#22C55E] font-bold block mb-4">Market Problem</span>
+                <h2 class="font-display text-6xl md:text-8xl text-white leading-none">THE COGNITIVE <br/><span class="text-white/10">GAP.</span></h2>
+                <p class="text-lg text-white/40 mt-6 max-w-xl leading-relaxed">
+                    Traditional finance apps are spreadsheets in disguise. They report history but fail to influence behavior. Pulse bridges the gap between cold data and human psychology.
+                </p>
+            </div>
+            <div class="flex-1 glass-card p-4">
+                <img src="assets/pulse/Pulse-CognitiveGap.png" alt="Cognitive Gap Analysis" class="rounded-2xl border border-white/5">
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-10 group">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-8 text-amber-500">
+                    <i data-lucide="brain"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 group-hover:text-[#22C55E] transition-colors uppercase tracking-tight">Psychological Blindness</h3>
+                <p class="text-white/50 text-sm leading-relaxed">Users lack awareness of the emotional triggers that drive their spending, leading to a cycle of reactive financial decisions.</p>
+            </div>
+            <div class="glass-card p-10 group">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-8 text-amber-500">
+                    <i data-lucide="activity"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 group-hover:text-[#22C55E] transition-colors uppercase tracking-tight">Data Without Context</h3>
+                <p class="text-white/50 text-sm leading-relaxed">Raw transaction lists don't account for life stress, sleep, or mood�the true drivers of capital velocity.</p>
+            </div>
+            <div class="glass-card p-10 group">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-8 text-amber-500">
+                    <i data-lucide="target"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 group-hover:text-[#22C55E] transition-colors uppercase tracking-tight">The 'Survival' Loop</h3>
+                <p class="text-white/50 text-sm leading-relaxed">Most tools focus on budgeting for survival rather than engineering for intentional growth and behavioral mastery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Nova -->
+    <section id="nova" class="py-32 px-8 bg-zinc-900/20 relative overflow-hidden border-y border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+            <div class="relative order-2 lg:order-1">
+                <div class="glass-card p-4 relative">
+                    <img src="assets/pulse/Pulse-MeetNova.png" alt="Meet Nova" class="rounded-2xl border border-white/5 mb-6">
+                    <img src="assets/pulse/Pulse-Nova-Heartbeat.png" alt="Nova Heartbeat" class="rounded-2xl border border-white/5">
+                    
+                    <!-- Ambient Glows -->
+                    <div class="absolute -top-20 -left-20 w-64 h-64 bg-[#22C55E]/10 rounded-full blur-[100px] animate-pulse-slow"></div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 space-y-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#22C55E]/10 border border-[#22C55E]/20">
+                    <i data-lucide="sparkles" class="w-3 h-3 text-[#22C55E]"></i>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-[#22C55E]">The Consciousness</span>
+                </div>
+                <h2 class="font-display text-6xl md:text-8xl text-white leading-tight">MEET <br/><span class="italic font-serif text-[#22C55E]">NOVA.</span></h2>
+                <p class="text-lg text-white/60 leading-relaxed">
+                    Nova is not a chatbot. She is a symbiotic consciousness that learns your financial heartbeat. She bridges the gap between cold data and human psychology.
+                </p>
+                <ul class="space-y-8">
+                    <li class="flex gap-6">
+                        <div class="w-10 h-10 rounded-full bg-[#22C55E]/10 border border-[#22C55E]/20 flex items-center justify-center shrink-0">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-[#22C55E]"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1 uppercase tracking-tight text-sm">Behavioral Mirroring</h4>
+                            <p class="text-white/40 text-xs leading-relaxed">Recognizes triggers like 'Stress spending on Thursday evenings' before they happen.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-6">
+                        <div class="w-10 h-10 rounded-full bg-[#22C55E]/10 border border-[#22C55E]/20 flex items-center justify-center shrink-0">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-[#22C55E]"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1 uppercase tracking-tight text-sm">Evolving Intelligence</h4>
+                            <p class="text-white/40 text-xs leading-relaxed">Builds a long-term profile, remembering breakthroughs and adapting her coaching style.</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-6">
+                        <div class="w-10 h-10 rounded-full bg-[#22C55E]/10 border border-[#22C55E]/20 flex items-center justify-center shrink-0">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-[#22C55E]"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1 uppercase tracking-tight text-sm">Cognitive Partnership</h4>
+                            <p class="text-white/40 text-xs leading-relaxed">Correlates sleep, work stress, and mood with financial activity via the Stress Index.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="tech" class="py-32 px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <span class="font-tech text-[10px] uppercase tracking-[0.5em] text-[#22C55E] font-bold block mb-4">Engineering Specs</span>
+            <h2 class="font-display text-6xl md:text-8xl text-white leading-none">THE TECHNICAL <br/><span class="text-white/10">HEARTBEAT.</span></h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-8 border-white/5 hover:border-[#22C55E]/30">
+                <i data-lucide="layers" class="mb-6 text-[#22C55E]"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-tight">Categorization Engine</h4>
+                <p class="text-white/40 text-xs leading-relaxed">Rule-based logic layer parsing transactions in real-time with high-confidence auto-assignment.</p>
+            </div>
+            <div class="glass-card p-8 border-white/5 hover:border-[#22C55E]/30">
+                <i data-lucide="cloud" class="mb-6 text-[#22C55E]"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-tight">S3 Receipt Ecosystem</h4>
+                <p class="text-white/40 text-xs leading-relaxed">Encrypted digital receipt management with pre-signed URLs for audit-ready paper trails.</p>
+            </div>
+            <div class="glass-card p-8 border-white/5 hover:border-[#22C55E]/30">
+                <i data-lucide="zap" class="mb-6 text-[#22C55E]"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-tight">Async Performance</h4>
+                <p class="text-white/40 text-xs leading-relaxed">FastAPI & Motor (Async MongoDB) for sub-millisecond response times under heavy loads.</p>
+            </div>
+            <div class="glass-card p-8 border-white/5 hover:border-[#22C55E]/30">
+                <i data-lucide="shield" class="mb-6 text-[#22C55E]"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-sm tracking-tight">Security First</h4>
+                <p class="text-white/40 text-xs leading-relaxed">JWT Auth, Bcrypt hashing, and read-only Plaid integration for bank-level encryption.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Case -->
+    <section id="investment" class="py-32 px-8 bg-zinc-950 border-y border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-20">
+                <div class="lg:w-1/3">
+                    <span class="font-tech text-[10px] uppercase tracking-[0.5em] text-[#22C55E] font-bold block mb-4">Strategic Model</span>
+                    <h2 class="font-display text-6xl md:text-7xl text-white mb-10 leading-none">THE INVESTMENT <br/><span class="text-white/10">CASE.</span></h2>
+                    
+                    <div class="glass-card p-8 border-[#22C55E]/20">
+                        <h3 class="text-xl font-bold mb-8 flex items-center gap-3">
+                            <i data-lucide="trending-up" class="text-[#22C55E] w-5 h-5"></i> Revenue Streams
+                        </h3>
+                        <ul class="space-y-6">
+                            <li class="flex justify-between border-b border-white/5 pb-4">
+                                <span class="text-white/60 text-xs">Pulse SaaS (Standard)</span>
+                                <span class="text-[#22C55E] font-tech text-sm">$9.99/mo</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-4">
+                                <span class="text-white/60 text-xs">Pulse Upgraded (Premium)</span>
+                                <span class="text-[#22C55E] font-tech text-sm">$14.99/mo</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/5 pb-4">
+                                <span class="text-white/60 text-xs">B2B Wellness Portals</span>
+                                <span class="text-white/40 font-tech text-sm">Custom</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="text-white/60 text-xs">Anonymized Insights</span>
+                                <span class="text-white/40 font-tech text-sm">Enterprise</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3 flex flex-col gap-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="glass-card p-10">
+                            <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">User ROI</h3>
+                            <p class="text-white/50 text-sm leading-relaxed mb-8">Average Pulse user recovers <span class="text-[#22C55E] font-bold">18% of wasted capital</span> within the first 90 days through behavioral interventions.</p>
+                            <div class="flex items-center gap-4 pt-4 border-t border-white/5">
+                                <div class="flex -space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-zinc-800 border-2 border-zinc-950 flex items-center justify-center text-[10px] font-black">DT</div>
+                                    <div class="w-10 h-10 rounded-full bg-zinc-700 border-2 border-zinc-950 flex items-center justify-center text-[10px] font-black">JS</div>
+                                    <div class="w-10 h-10 rounded-full bg-zinc-600 border-2 border-zinc-950 flex items-center justify-center text-[10px] font-black">AW</div>
+                                </div>
+                                <span class="text-[10px] font-black uppercase tracking-widest text-white/30">+2.4k Active Beta Users</span>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-10">
+                            <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Market Opp</h3>
+                            <p class="text-white/50 text-sm leading-relaxed mb-8">The global AI in Fintech market is projected to reach <span class="text-[#22C55E] font-bold">$45.2B by 2028</span>. Pulse sits at the intersection of Finance and Mental Health.</p>
+                            <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-[#22C55E] h-full w-3/4 rounded-full green-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-4 overflow-hidden">
+                        <img src="assets/pulse/Pulse-Investment.png" alt="Investment Projection" class="rounded-xl w-full">
+                    </div>
+
+                    <div class="glass-card p-10 border-[#22C55E]/10 bg-gradient-to-r from-zinc-950 to-transparent">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                            <div class="text-center md:text-left">
+                                <h2 class="text-4xl font-display text-white mb-2">READY TO IGNITE THE HEARTBEAT?</h2>
+                                <p class="text-white/40 text-sm">Join the future of behavioral finance. accepting strategic investment for Series A expansion.</p>
+                            </div>
+                            <a href="mailto:dte.solutions.llc@gmail.com?subject=Investor Pitch Request" class="px-12 py-6 bg-[#22C55E] text-black font-black uppercase text-xs rounded-full hover:scale-105 transition-all shadow-2xl shadow-[#22C55E]/20 whitespace-nowrap inline-block text-center">Request Investor Deck</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-8 text-center border-t border-white/5">
+        <p class="text-[10px] font-tech uppercase tracking-[0.5em] text-white/10">� 2026 DTE Solutions // STL STL Division // Engineered with Intention by Drew Ernst</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
